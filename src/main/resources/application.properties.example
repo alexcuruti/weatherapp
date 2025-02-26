@@ -1,0 +1,2 @@
+spring.application.name=weatherapp
+api.key=YOUR_SECRET_API_KEY
