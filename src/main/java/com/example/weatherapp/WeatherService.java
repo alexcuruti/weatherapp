@@ -32,7 +32,7 @@ public class WeatherService {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             return parseWeatherData(response.body());
         } catch (IOException | InterruptedException e) {
-            return "Error fetching weather data: " + e.getMessage();
+            return "Error retrieving weather data: " + e.getMessage();
         }
     }
 
@@ -51,7 +51,7 @@ public class WeatherService {
 
             return "Weather in " + cityName + ": " + temperature + "°C, " + weatherDescription;
         } catch (Exception e) {
-            return "Error parsing weather data: " + e.getMessage();
+            return "Error reading weather data: " + e.getMessage();
         }
     }
 }
